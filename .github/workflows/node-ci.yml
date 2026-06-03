@@ -7,18 +7,18 @@ jobs:
   test:
     runs-on: ubuntu-latest
   
-  steps:
-      - name: Checkout Repository Code
-        uses: actions/checkout@4
+    steps:
+        - name: Checkout Repository Code
+          uses: actions/checkout@4
 
-      - name: Setup Nodejs Enviroment
-        uses: actions/setup-node@4
-        with:
-          node-version: 18
+        - name: Setup Nodejs Enviroment
+          uses: actions/setup-node@4
+          with:
+            node-version: 18
 
-      - name: Installing dependencies 
-        run: npm install
-        
-      - name: Run test cases  
-        run: node test.js
+        - name: Installing dependencies 
+          run: npm install
+          
+        - name: Run test cases  
+          run: node test.js
 
