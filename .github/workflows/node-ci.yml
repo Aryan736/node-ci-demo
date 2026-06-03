@@ -1,0 +1,24 @@
+name: Basic CI with Node.js
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+  
+  steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@4
+
+      - name: Setup Nodejs Enviroment
+        uses: actions/setup-node@4
+        with:
+          node-version: 18
+
+      - name: Install dependencies 
+        run: npm install
+        
+      - name: Run test cases  
+        run: node test.js
+
